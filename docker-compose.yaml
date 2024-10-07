@@ -1,0 +1,14 @@
+services:
+  node-service:
+    build: ./node-service
+    ports:
+      - "3000:3000"
+    depends_on:
+      - go-service
+    environment:
+      - GO_SERVICE_URL=http://go-service:8080
+
+  go-service:
+    build: ./go-service
+    ports:
+      - "8080:8080"

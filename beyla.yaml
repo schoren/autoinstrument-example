@@ -1,0 +1,7 @@
+endpoint: "http://host.docker.internal:4317"
+log_level: DEBUG
+trace_printer: text
+discovery:
+  services:
+    - open_ports: 3000
+    - open_ports: 8080
