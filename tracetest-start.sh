@@ -20,6 +20,7 @@ environment:
   OTEL_EXPORTER_OTLP_ENDPOINT: "http://host.docker.internal:4317"
   BEYLA_OPEN_PORT: "$(IFS=,; echo "${ports[*]}")"
   BEYLA_TRACE_PRINTER: "text"
+  BEYLA_BPF_TRACK_REQUEST_HEADERS: "true"
 extra_hosts:
   - "host.docker.internal:host-gateway"
 EOF

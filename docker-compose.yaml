@@ -2,7 +2,7 @@ services:
   node-service:
     build: ./node-service
     ports:
-      - "3000:3000"
+      - "3003:3000"
     depends_on:
       - go-service
     environment:
